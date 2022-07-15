@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.info {
+  display: none;
+  flex: 1;
+  background: #525252;
+  height: 100vh;
+  flex-direction: column;
+  max-width: 50%;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-right: 25px;
+  justify-content: center;
+}
+.logo {
+  display: block;
+  max-width: 50%;
+}
+.info > h1 {
+  border-bottom: 2px solid #fff;
+  max-width: 50%;
+  color: white;
+}
+.info > p {
+  max-width: 60%;
+  color: white;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login {
+  animation: fade 1s none;
+  display: flex;
+  flex: 1;
+  background: #fafafa;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  background: #4f4f4f;
+  width: 40%;
+  height: 40%;
+  min-height: 20rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #606060;
+  border: 3px solid #009999;
+}
+
+.loginCard > h1 {
+  color: #c9c9c9;
+  text-align: center;
+}
+
+.loginFrom {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-height: 15rem;
+}
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 80%;
+}
+
+.loginInput label {
+  color: #fafafa;
+  font-size: 16pt;
+  margin-bottom: 8px;
+}
+.loginInput input {
+  height: 45px;
+  margin-bottom: 5px;
+  border-style: none;
+  background: #535353;
+  border-radius: 10px;
+  padding-left: 5px;
+  color: #fff;
+  font-size: 13pt;
+  border: 2px solid #009999;
+}
+.loginFormSubmit {
+  width: 70%;
+  height: 40px;
+  margin: 20px;
+  font-size: 18pt;
+  background: #606060;
+  border: 2px solid #009999;
+  border-radius: 100vh;
+  color: #fafafa;
+}
+.loginFormSubmit:focus {
+  box-shadow: 0 0 0 0;
+  outline: none;
+  opacity: 0.57;
+}
+.loginInput input:focus {
+  box-shadow: 0 0 0 0;
+  outline: none;
+  opacity: 0.57;
+  border: 2px solid #009999;
+}
+.loginInput input:hover {
+  outline: none;
+  border: 2px solid #009999;
+  opacity: 0.57;
+  transition: 150ms;
+}
+
+@media (min-width: 1280px) {
+  .info {
+    display: flex;
+  }
+}

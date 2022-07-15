@@ -1,0 +1,536 @@
+[
+  {
+    "Nome": "",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ALIMENTAÇÃO",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 10
+  },
+  {
+    "Nome": "AMPLIAÇÃO COMANDO ELETRICO",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO DE BANCO DE CAPACITORES",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO DE MOTORES",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO DE PAINÉIS ELÉTRICOS",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para ampliação de Painéis Eletricos, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO ENTRADA GERAL QGTB",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO MOTOR ELEVADOR-01",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AMPLIAÇÃO SEDE II 2021",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ATUALIZAÇÃO DO PROJETO ELETRICO QGBT",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ATUALIZAÇÃO PROJETOS CFP",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AUTOMAÇÃO",
+    "Categoria": "AUTOMAÇÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "AUTOMAÇÃO DE MÁQUINAS",
+    "Categoria": "AUTOMAÇÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para desenvolvimento de Automação para Máquinas, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "AUTOMAÇÃO PARA SISTEMA DE NR12",
+    "Categoria": "AUTOMAÇÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "BRIQUETADEIRA",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ÇÃO DOS BANCOS CAPAMPLIAACITORES",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "CONSULTORIA TÉCNICA GERENCIAMENTO DA FATURA DE ENERGIA",
+    "Categoria": "CONSULTORIA NA FATURA DE ENERGIA",
+    "Descrição": "CONSISTE NO FORNECIMENTO DE CONSULTORIA TÉCNICA, PARA AS 03(TRÊS) UNIDADES CONSUMIDORAS:\n\n6/815286-0 em IPIRANGA DO NORTE, \n6/897769-6 em GROSLANDIA e \n6/2175202-7 em SANTA RITA DO TRIVELATO. \n\nCOM OBJETIVO DE OBTER ECONOMIAS NOS CUSTOS COM ENERGIA ELÉTRICA, ATRAVÉS DE:\n\n- ACOMPANHAMENTO MENSAL DAS FATURAS DE ENERGIA,\n- ADEQUAÇÃO / AJUSTE DOS CONTRATOS DE FORNECIMENTO DE ENERGIA\nELÉTRICA JUNTO A CONCESSIONÁRIA, AJUSTES NAS DEMANDAS AUMENTO, REDUÇÃO OU ESCALONAMENTO DE DEMANDAS, \n- OBTENÇÃO DOS BENEFÍCIOS DE SAZONALIDADE E SUBSÍDIOS PARA PRODUTOR RURAL, \n- FORNECIMENTO DE LAUDO TÉCNICO MENSAL COM VALORES ECONOMIZADOS E DADOS PARA TOMADAS DE DECISÕES (AUMENTO / REDUÇÃO DE CARGA INSTALADA), COM SUGESTÕES DE POSSÍVEIS / PROVÁVEIS MELHORIAS A REALIZAR.\n- VISITA TÉCNICA AS UNIDADES.\n\nVISANDO UMA UTILIZAÇÃO DA ENERGIA ELÉTRICA DE FORMA RACIONAL E ECONÔMICA, COM MELHOR APROVEITAMENTO / RENDIMENTO MENSAL JUNTO A CONCESSIONÁRIA DE ENERGIA ELÉTRICA.",
+    "Preço": 0
+  },
+  {
+    "Nome": "CONTROLE E MONITORAMENTO DA PRENSA",
+    "Categoria": "AUTOMAÇÃO",
+    "Descrição": "Será elaborado toda a automação para a Prensa, através de CLP (CONTROLADOR LÓGICO PROGRAMÁVEL), IHM (INTERFACE HOMEM MÁQUINA), sendo possível controle de acionamento de válvulas que fazem os movimentos hidráulicos, monitoramento de pressão, temperatura do tanque de óleo, movimentações automáticas de pistões, carro busca fardo, ensacadeira etc.\n Será elaborado lógicas para dados de produção e temporizadores de movimentos da Prensa.\n\nSerá disponibilizado as seguintes informações na tela da IHM: \n- Tempo de máquina parada; \n- Tempo de máquina em funcionamento; \n- Quantidade de Fardos Produzidos; \n- Médias de produção fardos hora; \n- Tempos do ciclo completo da Prensa; \n- Tempo de prensagem; \n- Tempo de Calcagem; \n- Tempo do Giro; \n- Tempo de amarração.",
+    "Preço": 0
+  },
+  {
+    "Nome": "DESCONTO",
+    "Categoria": "DESCONTO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "DESMONTAGEM DE REDE AÉREA DE DISTRIBUIÇÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ELABORAÇÃO DE DIAGRAMA ELÉTICO PARA ENCAMINHAMENTOS DA PRENSA",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para ELABORAÇÃO DIAGRAMA ELÉTRICO dos encaminhamentos de MOTORES e INSTRUMENTAÇÃO da Prensa, onde é considerada a NBR 5410 que diz os seguintes pontos:\n\n•\tA localização das cabines de medição, transformação e quadros de potência e distribuição;\n•\tA divisão dos circuitos elétricos;\n•\tA posição dos eletrodutos de interligação dos circuitos elétricos;\n•\tO número e a caracterização dos condutores dentro dos eletrodutos;\n•\tAs chaves secionadoras, disjuntores e seus respectivos capacidade de condução, seccionamento e ruptura da Corrente elétrica;\n•\tDeve-se representar aspectos do circuito elétrico e do circuito físico nos diagramas unifilares.\n\nO item 10.2.3 da NR10 menciona que\nAs empresas estão obrigadas a manter esquemas unifilares atualizados das instalações elétricas dos seus estabelecimentos com as especificações do sistema de aterramento e demais equipamentos e dispositivos de proteção.",
+    "Preço": 0
+  },
+  {
+    "Nome": "ELABORAÇÃO DE DIAGRAMA ELÉTICO PARA PAINEL DA PRENSA",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para ELABORAÇÃO DIAGRAMA ELÉTRICO PAINEL ELÉTRICO da Prensa, onde é considerada a NBR 5410 que diz os seguintes pontos:\n\n•\tA localização de componentes de potência e distribuição;\n•\tA divisão dos circuitos elétricos;\n•\tDimensões do Painel;\n•\tAs chaves secionadoras, disjuntores e seus respectivos capacidade de condução, seccionamento e ruptura da Corrente elétrica;\n•\tDeve-se representar aspectos do circuito elétrico e do circuito físico nos diagramas unifilares;\n•\tRepresentação de diagrama trifilar.\n\nO item 10.2.3 da NR10 menciona que\nAs empresas estão obrigadas a manter esquemas unifilares atualizados das instalações elétricas dos seus estabelecimentos com as especificações do sistema de aterramento e demais equipamentos e dispositivos de proteção.",
+    "Preço": 0
+  },
+  {
+    "Nome": "ELABORAÇÃO DE PROJETO ELÉTRICO PARA CENTRO DE CONTROLE DE MOTORES",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "ENCAMINHAMENTO E CABOS PARA INSTRUMENTAÇÃO DA PRENSA",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO-DE-OBRA para montagem de encaminhamentos para até 65 (SESSENTA E CINCO) instrumentos de medição e acionamento (CONFORME RELAÇÃO ABAIXO), através de LEITOS E ELETRODUTOS GALVANIZADOS que serão instalados / fixados nas estruturas metálicas através de suportes. Serão utilizados cabos “multipolares” com isolação EPR 70°C 500V com bitola mínima de 1,00mm².\n\nSeq.\tInstrumentação Prensa .... – UBA .....\nSENSORES DE MOVIMENTO\nSeq.\tDescrição\tTipo\n1\t\tINDUTIVO\n2\t\tINDUTIVO\n3\t\tINDUTIVO\n4\t\tINDUTIVO\n5\t\tINDUTIVO\n6\t\tINDUTIVO\n7\t\tINDUTIVO\n8\t\tINDUTIVO\n9\t\tINDUTIVO\n10\t\tINDUTIVO\n11\t\tINDUTIVO\n12\t\tANALÓGICO\n13\t\tANALÓGICO\n14\t\tANALÓGICO\n15\t\tANALÓGICO\n16\t\tANALÓGICO\n\nSeq.\tInstrumentação Prensa .... – UBA .....\nVÁLVULAS\nSeq.\tDescrição\tTipo\n1\t\tON / OFF\n2\t\tON / OFF\n3\t\tON / OFF\n4\t\tON / OFF\n5\t\tON / OFF\n6\t\tON / OFF\n7\t\tON / OFF\n8\t\tON / OFF\n9\t\tON / OFF\n10\t\tON / OFF\n11\t\tANALÓGICO\n12\t\tANALÓGICO\n13\t\tANALÓGICO\n14\t\tANALÓGICO\n15\t\tANALÓGICO",
+    "Preço": 0
+  },
+  {
+    "Nome": "ENCAMINHAMENTO E CABOS PARA MOTORES DA PRENSA",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO-DE-OBRA para montagem de encaminhamentos para até 07 (SETE) motores elétricos (CONFORME QUADRO DE CARGAS), através de LEITOS E ELETRODUTOS GALVANIZADOS que serão instalados / fixados nas estruturas metálicas através de suportes. Serão utilizados cabos “tetra polares” com isolação EPR 90°C 0,6/1kV com bitola mínima de 2,5mm².\n\nSeq.\tCargas Prensa .... – UBA ....\tPotência\n\t\t\t\n\t\tPotência\tUnidade\tCorrente\t\nMÁQUINAS ALGODOEIRA\t\n1\tBOMBA CALCADOR\t100\tCV\t143,0\t\n2\tBOMBA PISTÃO PRINCIPAL\t125\tCV\t180,0\t\n3\tBOMBA PISTÃO AUXILIAR\t125\tCV\t180,0\t\n4\tBOMBA EMPURRADOR\t30\tCV\t45,0\t\n5\tBOMBA RECIRCULAÇÃO\t20\tCV\t30,0\t\n6\tRADIADOR\t10\tCV\t16,3\t\n7\tRADIADOR\t10\tCV\t16,3",
+    "Preço": 0
+  },
+  {
+    "Nome": "ENCAMINHAMENTOS E CABOS PARA ILUMINAÇÃO",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para instalação de iluminações, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "ENCAMINHAMENTOS E CABOS PARA MOTORES",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para instalação de motores, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "ENCAMINHAMENTOS E CABOS PARA TOMADAS",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para instalação de tomadas, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "ESTUDO DE PROTEÇÃO, COORDENAÇÃO E SELETIVIDADE",
+    "Categoria": "ESTUDO DE PROTEÇÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH AUXILAR - FINAIS DE SEMANA E FERIADOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A MAIS 40% EM TRABALHOS REALIZADOS SABADO DOMINGO E  FERIADOS.",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH AUXILIAR EM VIAGEM",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A 50% DURANTE DESLOCAMENTO",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH AUXILIAR I",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH MONTADOR - FINAIS E SEMANA E FERIADOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH MONTADOR EM VIAGEM",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A 50% DURANTE DESLOCAMENTO",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH MONTADOR I",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH PROJETISTA I",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNCO DE PAINÉIS ELÉTRICOS - FINAIS DE SEMANA E FERIADOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A MAIS 40% EM TRABALHOS REALIZADOS SABADO DOMINGO E  FERIADOS.",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNICO DE AUTOMAÇÃO - FINAIS DE SEMANA E FERIADOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A MAIS 40% EM TRABALHOS REALIZADOS SABADO DOMINGO E  FERIADOS.",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNICO EM AUTOMAÇÃO",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNICO EM AUTOMAÇÃO EM VIAGEM",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A 50% DURANTE DESLOCAMENTO",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNICO EM PAINÉIS ELÉTRICOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "HH TÉCNICO EM PAINÉIS ELÉTRICOS EM VIAGEM",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "O VALOR É REFERENTE A 50% DURANTE DESLOCAMENTO",
+    "Preço": 0
+  },
+  {
+    "Nome": "HOSPEDAGEM",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "IDENTIFICAÇÃO DE PAINÉIS",
+    "Categoria": "SERVIÇOS DE ENGENHARIA",
+    "Descrição": "IDENTIFICAÇÃO DE PAINÉIS ELÉTRICOS",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSPEÇÃO PREVENTIVA POSTO DE TRANSFORMAÇÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO DE OBRA especializada para realização de\ninspeção preventiva de 04 (Quatro) TRANSFORMADORES DE FORÇA TRIFÁSICO, A\nÓLEO, sendo 2.000 kVA + 2.000 kVA +1.500 kVA +500 kVA, FLANGEADO NA MEDIA\nE BAIXA TENSÃO, FREQUENCIA 60Hz, TENSÃO 34.500V, TENSÃO SECUNDÁRIA 380\n/220V, USO EXTERNO, Contendo:\n- INSPEÇÃO VISUAL;\nConsiste em inspecionar todos os componentes e periféricos dos Transformadores\ncom intuito de identificar: buchas trincadas, oxidação de componentes, vazamentos de\nóleo, cabos e terminais com folgas ou danos que possam afetar futuramente o perfeito\nfuncionamento do mesmo.\nApresentando relatório fotográfico das condições encontradas e ações a serem\ntomadas.\n- MEDIÇÕES DAS RESISTENCIAS;\nConsiste em executar a medição da resistência de isolamento entre PRIMÁRIO x\nSECUNDÁRIO e FASES x CARCAÇA.\nA medição da resistência de isolamento é realizada por meio de Megôhmetro, uma\ntensão CC de 5.000 V será aplicada entre os polos e a carcaça para garantir que o\nTransformador está seguro para operar.\nMedição da resistência de isolamento dos CABOS E MUFLAS de ligação em 34,5 kV.\nApresentando Laudo técnico das medições encontradas.\n- ANÁLISE DO ÓLEO MINERAL ISOLANTE DOS TRANSFORMADORES;\nConsiste em coletar em campo amostras do óleo isolante de cada transformador,\nenviar para laboratório especializado para testes (físico, químico, cromatográfico, pcb)\ne apresentação de laudo técnico.\n- MEDIÇÃO DO ATERRAMENTO;\nConsiste em executar a medição da MALHA DE ATERRAMENTO dos\ntransformadores, para-raios e muflas através de Terrômetro, e apresentação de laudo\ntécnico.\n- INSPEÇÃO DAS MUFLAS, PARA-RAIOS E ELOS FUSÍVEIS DE PROTEÇÃO DO\nTRANSFORMADOR\nConsiste em inspecionar os equipamentos de proteção a montante dos\ntransformadores, conferencia dos elos-fusíveis, para-raios, chaves fusíveis, cabos e\nterminais de conexão, para assegurar que as proteções estão de acordo com as normas\nvigentes. Apresentação de relatório fotográfico.\nSerá emitida a ART (Anotação de Responsabilidade Técnica) para os serviços\nprestados.",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSTALAÇÃO DE MALHA DE ATERRAMENTO",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO DE OBRA para instalação de MALHA DE ATERRAMENTO para 01 (HUM) GALPÃO UPL9 de 20m X 10m com CABO DE COBRE NÚ e HASTES DE ATERRAMENTO.\nAs CONEXÕES SUBTERRÂNEAS SERÃO COM SOLDAS EXOTÉRMICAS e APARENTES COM TERMINAL DE COMPRESSÃO. conforme PROJETO D-UPL9-70-012  fornecido pela CONTRATANTE (GL ENERGIA MJ).",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSTALAÇÃO DE MALHA DE ATERRAMENTO PARA MÉDIA TENSÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Consiste no fornecimento de  MÃO DE OBRA para instalação de MALHA DE ATERRAMENTO, para SUBESTAÇÃO EM ALVENARIA, TRANSFORMADOR ___ kVA e GRUPO GERADOR (Se Houver), com CABO DE COBRE NU 50mm² e HASTES DE ATERRAMENTO 5/8” X 3.000mm.",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSTALAÇÃO DE SENSORES",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para instalação de sensores, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSTALAÇÃO DE SISTEMA DE PROTEÇÃO CONTRA DESCARGAS ATMOSFÉRICAS (SPDA)",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO DE OBRA para instalação de SISTEMA DE PROTEÇÃO CONTRA DESCARGAS ATMOSFÉRICAS (SPDA).\nA partir da MALHA DE ATERRAMENTO serão instaladas SUBIDAS PARA CONEXÃO COM OS TERMINAIS AÉREOS conforme o projeto D-UPL9-76-011 fornecido pelo CONTRATANTE (GL ENERGIA).",
+    "Preço": 0
+  },
+  {
+    "Nome": "INSTALAÇÃO QUADRO DE TOMADA",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "Mão de Obra para instalação do quadro de Tomada , encaminhamento elétrico e passagem de cabo.",
+    "Preço": 0
+  },
+  {
+    "Nome": "INVENTARIO DE MAQUINAS",
+    "Categoria": "CONSULTORIA",
+    "Descrição": "O inventário de máquinas consiste em levantar as informações citadas abaixo e organizar\nrelatório de modo que atenda os requisitos normativos.",
+    "Preço": 0
+  },
+  {
+    "Nome": "KM RODADO",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "KM RODADO IDA E VOLTA",
+    "Preço": 0
+  },
+  {
+    "Nome": "LAUDO DE NR12",
+    "Categoria": "SERVIÇOS DE ENGENHARIA",
+    "Descrição": "LAUDO DE NR12",
+    "Preço": 0
+  },
+  {
+    "Nome": "LAUDO INSPEÇÃO VISUAL SPDA",
+    "Categoria": "CONSULTORIA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MANUTENÇÃO 2021",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MANUTENÇÃO EM INSTALAÇÕES ELÉTRICAS",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MANUTENÇÃO EM PAINÉIS ELÉTRICOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MANUTENÇÃO EM SISTEMA DE NR12",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MANUTENÇÃO PREVENTIVA POSTO DE TRANSFORMAÇÃO",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MATERIAIS UTILIZADOS",
+    "Categoria": "ASSISTÊNCIA TÉCNICA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MELHORIAS EM PAINÉIS ELÉTRICOS",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MESA DA PRENSA",
+    "Categoria": "AUTOMAÇÃO",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para substituição do hardware existente\nSchneider (COM SENHA), para hardware Siemens (CPU 1510SP-1) com módulos de\nexpansão, visando eficiência, controle e livre acesso para intervenções.\nConforme levantamento realizado, não será necessária a substituição da mesa\nexistente, pois a mesma está em bom estado de conservação e somente será feito uma\nmanutenção e acabamento dos comandos elétricos da mesma. Será utilizada a IHM\nexistente de 12” touch smart, hardware Schneider. Será realizado um reaperto geral nas\nconexões entre componentes e cabos de comando da mesa.",
+    "Preço": 0
+  },
+  {
+    "Nome": "MONTAGEM DE PAINÉIS ELÉTRICOS",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para montagem de Painéis Eletricos, onde serão considerados os seguintes pontos:",
+    "Preço": 0
+  },
+  {
+    "Nome": "MONTAGEM DE PAINEL ELÉTRICO",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MONTAGEM QUADRO DE TOMADA",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MONTAGENS ELETROMECÂNICAS DE BAIXA TENSÃO",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "MONTAGENS ELETROMECÂNICAS DE MÉDIA TENSÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "OBRA ALGODOEIRA",
+    "Categoria": "OBRA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "PAINEL ELÉTRICO DA PRENSA",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "Consiste no fornecimento de mão-de-obra para MONTAGEM E INSTALAÇÃO DO PAINEL ELÉTRICO DA PRENSA; \n\t       A montagem do painel elétrico da prensa será realizada na fábrica da JMC AUTOMAÇÃO, seguindo os requisitos estabelecidos no projeto elétrico sempre levando em consideração a NBR 5410, será realizado pré-teste de componentes dentro da fábrica;\n       A Instalação do painel elétrico da prensa consiste em efetuar a interligação do Painel com os Motores Elétricos, \nSensores e Válvulas.",
+    "Preço": 0
+  },
+  {
+    "Nome": "PARAMETRIZAÇÃO DE RELE DE SUBESTAÇÃO",
+    "Categoria": "PARAMETRIZAÇÃO DE RELE",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "POSTO DE TRANSFORMAÇÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Consiste em MÃO DE OBRA para INSTALAÇÃO DE TRANSFORMADOR ____ kVA A ÓLEO, ___kV, INSTALAÇÃO DE POSTE DE TRANSIÇÃO COM JOGO DE CHAVES FUSÍVEL, PARA-RAIO, ATERRAMENTO E ACESSÓRIOS.",
+    "Preço": 0
+  },
+  {
+    "Nome": "PROJETO ELÉTRICO",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "PROJETO ELÉTRICO DE MÉDIA TENSÃO - GRUPO A",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "Consiste em ELABORAR / APRESENTAR / APROVAR PROJETO ELÉTRICO DE MÉDIA TENSÃO – ___kV, junto à ENERGISA CUIABÁ / MT, POTÊNCIA TOTAL ____kVA, DEMANDA CONTRATADA ___kW, contendo: SOLICITAÇÃO DE DISPONIBILIDADE DE ENERGIA ELÉTRICA, ESTUDO DE PROTEÇÃO, COORDENAÇÃO e SELETIVIDADE e ART'S ANOTAÇÃO DE RESPONSABILIDADE TÉCNICA (PROJETO E EXECUÇÃO).",
+    "Preço": 0
+  },
+  {
+    "Nome": "PROJETO ELÉTRICO DE MÉDIA TENSÃO - GRUPO B",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "Consiste em ELABORAR / APRESENTAR / APROVAR PROJETO ELÉTRICO DE MÉDIA TENSÃO 36kV, junto à ENERGISA CUIABÁ / MT, contendo SOLICITAÇÃO DE DISPONIBILIDADE DE CARGA, e ANOTAÇÃO DE RESPONSABILIDADE TÉCNICA (PROJETO E EXECUÇÃO).",
+    "Preço": 0
+  },
+  {
+    "Nome": "PROJETO USINA FOTOVOLTÁICA",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "PROJETOS ELÉTRICOS DE NR12",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "PROJETOS ELÉTRICOS DE NR12",
+    "Preço": 0
+  },
+  {
+    "Nome": "REDE AÉREA DE DISTRIBUIÇÃO DE ENERGIA EM MÉDIA TENSÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO DE OBRA para construção de REDE AÉREA DE DISTRIBUIÇÃO EM MÉDIA TENSÃO ___kV, COM COMPRIMENTO MÁXIMO DE ___METROS, CABO ____ AWG, conforme PROJETO APROVADO pela Concessionária ENERGISA /MT seguindo as normas vigentes.",
+    "Preço": 0
+  },
+  {
+    "Nome": "REDE SUBTERRÂNEA DE DISTRIBUIÇÃO DE ENERGIA EM MÉDIA TENSÃO",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "REFORMA DE PAINÉIS ELÉTRICOS",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "REVISÃO DE PAINÉIS ELÉTRICOS",
+    "Categoria": "REVISÃO DE PAINÉIS ELÉTRICOS",
+    "Descrição": "REVISÃO DE PAINÉIS ELÉTRICOS",
+    "Preço": 0
+  },
+  {
+    "Nome": "SCANER PRENSA BUSA",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "SCANER PRENSA LUMUS",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "START UP",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUBESTAÇÃO ABRIGADA DE MEDIÇÃO E PROTEÇÃO EM 13,8kV",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Montagem de SUBESTAÇÃO EM ALVENARIA PARA MEDIÇÃO, PROTEÇÃO E DISTRIBUIÇÃO\nDE ENERGIA ELÉTRICA em 13,8kV (ENTRADA E SAÍDA AÉREAS), BARRAMENTO 15kV, PROTEÇÃO CONTRA DESCARGAS ATMOSFÉRICAS, CHAVE SECCIONADORA PARA MANOBRA DO DISJUNTOR DE MÉDIA TENSÃO, DISJUNTOR DE MÉDIA TENSÃO, TRANSFORMADORES DE CORRENTE / POTENCIAL (TC's/TP's), RELÉ DE PROTEÇÃO COM FUNÇÕES (ANSI 50/51/50N/51N, DISPARADOR CAPACITIVO, INSTALAÇÃO DE ILUMINAÇÃO E ACESSÓRIOS, SEGUINDO AS NORMAS VIGENTES DA CONCESSIONÁRIA ENERGISA/MT.",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUBESTAÇÃO AO TEMPO DE MEDIÇÃO E PROTEÇÃO EM 34,5kV",
+    "Categoria": "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "Descrição": "Consiste no fornecimento de MÃO DE OBRA especializada para montagem de SUBESTAÇÃO AO TEMPO PARA MEDIÇÃO, PROTEÇÃO E DISTRIBUIÇÃO DE ENERGIA ELÉTRICA em 34,5kV (ENTRADA E SAÍDA AÉREAS), SISTEMA DE PROTEÇÃO CONTRA DESCARGAS ATMOSFÉRICAS (SPDA),\nJOGO DE CHAVES TIPO FACA PARA MANOBRA DO DISJUNTOR DE MÉDIA\nTENSÃO (Bypass), DISJUNTOR DE MÉDIA TENSÃO (RELIGADOR), TRANSFORMADORES DE CORRENTE / POTENCIAL (TC's/TP's), RELÉ DE PROTEÇÃO COM FUNÇÕES (ANSI 50/51/50N/51N, DISPARADOR CAPACITIVO,\nINSTALAÇÃO DE ILUMINAÇÃO E ACESSÓRIOS, SEGUINDO AS NORMAS VIGENTES DA CONCESSIONÁRIA ENERGISA /MT.",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUBSTITUIÇÃO DE PROJETO DE SEGURANÇA CONTRA INCÊNDIO E PÂNICO (PSCIP)",
+    "Categoria": "PROJETOS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUPORTE TÉCNICO",
+    "Categoria": "CONSULTORIA",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUPORTE TÉCNICO EM INSTALAÇÕES ELÉTRICAS",
+    "Categoria": "INSTALAÇÕES DE BAIXA TENSÃO",
+    "Descrição": "",
+    "Preço": 0
+  },
+  {
+    "Nome": "SUPORTE TÉCNICO EM PAINÉIS ELÉTRICOS",
+    "Categoria": "PAINÉIS ELÉTRICOS",
+    "Descrição": "",
+    "Preço": 0
+  }
+]
