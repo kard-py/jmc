@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  experiments: { topLevelAwait: true },
+  webpack: (config, options) => {
+    config.experiments = {
+      topLevelAwait: true,
+    };
+    return config;
+  },
 };
-
-module.exports = nextConfig;
