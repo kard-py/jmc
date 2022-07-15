@@ -2,9 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experiments: {
-    topLevelAwait: true,
-  },
+  experiments: { topLevelAwait: true },
 };
 
 module.exports = nextConfig;
