@@ -1,7 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const URL =
-  "mongodb+srv://Kard:caiodetz654321@cluster0.dpdcsag.mongodb.net/?retryWrites=true&w=majority";
+const URL = process.env.URL_MONGO;
 
 const client = new MongoClient(URL);
 
