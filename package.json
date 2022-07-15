@@ -21,6 +21,7 @@
     "jspdf": "^2.5.1",
     "md5": "^2.3.0",
     "mongodb": "^4.7.0",
+    "mongodb-client-encryption": "^2.1.0",
     "next": "12.2.1",
     "nookies": "^2.5.2",
     "nprogress": "^0.2.0",
