@@ -1,6 +1,6 @@
 const SECRET_KEY = process.env.SECRET_KEY;
 
-import connect from "../../../../services/mongodb";
+import connect from "../services/mongodb";
 
 const { db } = await connect();
 
