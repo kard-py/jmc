@@ -1,8 +1,7 @@
-import { users, SECRET_KEY } from "../../../src/data";
-
 import jwt from "jsonwebtoken";
+import connect from "../../../services/mongodb";
 
-export default (req, res) => {
+export default async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "method not allowed" });
   }
@@ -12,6 +11,10 @@ export default (req, res) => {
     password: req.body.password,
   };
 
+  const { db } = await connect();
+
+  let users = await db.collection("users").find().toArray();
+
   for (let i in users) {
     if (
       users[i].username === data.username &&
@@ -19,7 +22,9 @@ export default (req, res) => {
     ) {
       res.status(200).json({
         error: "null",
-        token_jwt: jwt.sign(users[i].data, SECRET_KEY, { expiresIn: 60 * 45 }),
+        token_jwt: jwt.sign(users[i].data, process.env.SECRET_KEY, {
+          expiresIn: 60 * 45,
+        }),
         userData: users[i].data,
       });
     }

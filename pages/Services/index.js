@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Header from "../../src/components/Header";
-import Card from "../../src/components/Card";
+import Header from "../../components/Header";
+import Card from "../../components/Card";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import axios from "axios";
-import { AuthContext } from "../../src/contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const getServerSideProps = async (ctx) => {
   const { "JMC.Auth.token": token } = ctx.req.cookies;

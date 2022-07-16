@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
-import { AuthProvider } from "../src/contexts/AuthContext";
+import { AuthProvider } from "../contexts/AuthContext";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

@@ -1,10 +1,9 @@
-import Header from "../../src/components/Header";
-import Card from "../../src/components/Card";
+import Header from "../../components/Header";
+import Card from "../../components/Card";
 import { useContext, useEffect, useState } from "react";
-import LineChart from "../../src/components/LineChart";
-import DoughnutChart from "../../src/components/DoughnutChart";
-import Image from "next/image";
-import { AuthContext } from "../../src/contexts/AuthContext";
+import LineChart from "../../components/LineChart";
+import { DoughnutChart } from "../../components/DoughnutChart";
+import { AuthContext } from "../../contexts/AuthContext";
 import axios from "axios";
 
 export const getServerSideProps = async (ctx) => {
@@ -76,6 +75,7 @@ const Home = () => {
               <strong>Seja Bem Vindo: </strong>
               {user?.name}
             </h1>
+
             <img
               src={user?.avatar_url}
               className={`w-12 border-neutral-700 border-2 rounded-full hidden sm:flex`}

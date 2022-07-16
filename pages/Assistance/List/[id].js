@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Header from "../../../src/components/Header";
-import Card from "../../../src/components/Card";
+import Header from "../../../components/Header";
+import Card from "../../../components/Card";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../../src/contexts/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import axios from "axios";
 
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
@@ -60,7 +60,6 @@ const List = ({ id, data }) => {
   const { reloadToken, sToken } = useContext(AuthContext);
 
   useEffect(() => {
-    // console.log(data);
     reloadToken(sToken);
     let a = data?.dataPrev.split("-");
     setFormatData(`${a[2]}/${a[1]}/${a[0]}`);

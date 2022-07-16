@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Header from "../../../src/components/Header";
-import Card from "../../../src/components/Card";
+import Header from "../../../components/Header";
+import Card from "../../../components/Card";
 import { useContext, useEffect, useState } from "react";
 import { MdOutlineAdd } from "react-icons/md";
 import { useRouter } from "next/router";
-import { clientes, servicos } from "../../../src/data";
-import { AuthContext } from "../../../src/contexts/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import { useForm } from "react-hook-form";
 
 import axios from "axios";
@@ -22,15 +21,24 @@ export const getServerSideProps = async (ctx) => {
     );
     if (result.data.error === "null" && result.data.status === true) {
       const response = await axios.post(
-        `http://${ctx.req.headers.host}/api/Assistance/list/`,
+        `http://${ctx.req.headers.host}/api/Service/list/`,
         { token_jwt: token }
+      );
+
+      const clientes = await axios.post(
+        `http://${ctx.req.headers.host}/api/data/clientes`
+      );
+      const servicos = await axios.post(
+        `http://${ctx.req.headers.host}/api/data/servicos`
       );
 
       const id = response.data.length + 1;
       return {
         props: {
+          clientes: clientes.data,
+          servicos: servicos.data,
           idReq: id,
-        },
+        }, // will be passed to the page component as props
       };
     } else if (result.data.error !== "null" && result.data.status === false) {
       return {
@@ -42,18 +50,11 @@ export const getServerSideProps = async (ctx) => {
       };
     }
   }
-
-  return {
-    redirect: {
-      destination: "/",
-      permanent: false,
-    },
-    props: {},
-  };
 };
 
-const Create = ({ idReq }) => {
+export default function Create({ idReq, clientes, servicos }) {
   const { register, handleSubmit } = useForm();
+
   const [assistance, setAssistance] = useState([]);
   const [id, setId] = useState(idReq);
   const [data, setData] = useState("");
@@ -78,11 +79,11 @@ const Create = ({ idReq }) => {
       valor: "",
     },
   ]);
-
   const { reloadToken, sToken } = useContext(AuthContext);
 
   useEffect(() => {
     reloadToken(sToken);
+    const SECRET_KEY = process.env.SECRET_KEY;
   }, []);
 
   useEffect(() => {
@@ -742,6 +743,4 @@ const Create = ({ idReq }) => {
       </div>
     </div>
   );
-};
-
-export default Create;
+}

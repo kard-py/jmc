@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import { SECRET_KEY } from "../../../../src/data";
 
 import connect from "../../../../services/mongodb";
 export default async function Create(req, res) {
@@ -10,7 +9,7 @@ export default async function Create(req, res) {
     res.status(500).json({ error: "Not Auth" });
   }
   const token = req.body.token_jwt;
-  const result = jwt.verify(token, SECRET_KEY, (err, decode) => {
+  const result = jwt.verify(token, process.env.SECRET_KEY, (err, decode) => {
     if (err) {
       return { isValid: false, payload: null, error: err };
     }

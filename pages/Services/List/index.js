@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Header from "../../../src/components/Header";
-import Card from "../../../src/components/Card";
+import Header from "../../../components/Header";
+import Card from "../../../components/Card";
 import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
-import { AuthContext } from "../../../src/contexts/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import Link from "next/link";
 import axios from "axios";
 

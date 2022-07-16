@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Header from "../../../src/components/Header";
-import Card from "../../../src/components/Card";
+import Header from "../../../components/Header";
+import Card from "../../../components/Card";
 import { useContext, useEffect, useState } from "react";
 import { MdOutlineAdd } from "react-icons/md";
 import { useRouter } from "next/router";
-import { clientes, servicos } from "../../../src/data";
-import { AuthContext } from "../../../src/contexts/AuthContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 import { useForm } from "react-hook-form";
 
 import axios from "axios";
@@ -25,9 +24,17 @@ export const getServerSideProps = async (ctx) => {
         `http://${ctx.req.headers.host}/api/Assistance/list/${ctx.query.id}`,
         { token_jwt: token }
       );
+      const clientes = await axios.post(
+        `http://${ctx.req.headers.host}/api/data/clientes`
+      );
+      const servicos = await axios.post(
+        `http://${ctx.req.headers.host}/api/data/servicos`
+      );
 
       return {
         props: {
+          clientes: clientes.data,
+          servicos: servicos.data,
           dataObj: response.data,
         },
       };
@@ -51,7 +58,7 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-const Create = ({ dataObj }) => {
+const Create = ({ dataObj, clientes, servicos }) => {
   const { register, handleSubmit } = useForm();
   const [assistance, setAssistance] = useState([]);
   const [id, setId] = useState();
