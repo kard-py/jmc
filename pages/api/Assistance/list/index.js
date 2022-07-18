@@ -25,26 +25,6 @@ export default async function Create(req, res) {
 
     const response = await db.collection("assistances").find().toArray();
 
-    async function gen_id() {
-      for (let i in response) {
-        if (response[i]._id > i + 1 && i < response.length - 1) {
-          let id = i + 1;
-          console.log(id);
-          return id;
-          break;
-        } else if (i === response.length - 1) {
-          let id = response.length + 1;
-          console.log(id);
-          return id;
-          break;
-        }
-      }
-    }
-
-    let id = await gen_id();
-
-    console.log(id);
-
     res.status(200).json(response);
   } else {
     const error = result.error;

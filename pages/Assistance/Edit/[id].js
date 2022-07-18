@@ -68,7 +68,6 @@ const Create = ({ dataObj, clientes, servicos }) => {
     cliente: {},
     index: "",
   });
-  const [projeto, setProjeto] = useState("");
   const [obs, setObs] = useState("");
   const [services, setServices] = useState([
     {
@@ -94,7 +93,6 @@ const Create = ({ dataObj, clientes, servicos }) => {
     setData(dataObj.dataPrev);
     setEmpresa(dataObj.empresa);
     setObs(dataObj.observacao);
-    setProjeto(dataObj.projeto);
     setServices(dataObj.serviços);
     console.log(services);
   }, []);
@@ -206,7 +204,6 @@ const Create = ({ dataObj, clientes, servicos }) => {
       dataPrev: data,
       empresa: empresa,
       cliente: cliente,
-      projeto: projeto,
       observacao: obs,
       serviços: services,
     };
@@ -357,31 +354,7 @@ const Create = ({ dataObj, clientes, servicos }) => {
                   ))}
                 </select>
               </div>
-              {/* Projeto */}
-              <div className="flex flex-col w-60 px-3">
-                <span
-                  className={`text-lg ${
-                    projeto !== "" ? "text-green-500" : "text-neutral-500"
-                  }`}
-                >
-                  Projeto:
-                </span>
-                <select
-                  required={true}
-                  name="projeto"
-                  value={projeto}
-                  onChange={(e) => {
-                    setProjeto(e.currentTarget.value);
-                  }}
-                  id="projeto"
-                  className={`w-full h-8 rounded-md border-2 ${
-                    projeto !== "" ? "border-green-500" : "border-neutral-500"
-                  } focus:shadow-none focus:outline-none focus:border-blue-400`}
-                >
-                  <option></option>
-                  <option value="1">Vale do Rio Verde</option>
-                </select>
-              </div>
+
               {/* Observação */}
               <div className="flex basis-10/12 flex-col px-3">
                 <span

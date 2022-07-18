@@ -7,9 +7,9 @@ const CheckToken = (req, res) => {
 
   jwt.verify(req.body.token_jwt, process.env.SECRET_KEY, (err, decode) => {
     if (err) {
-      res.status(200).json({ error: "Token Invalido", status: false });
+      return res.status(200).json({ error: "Token Invalido", status: false });
     }
-    res.status(200).json({ error: "null", status: true });
+    return res.status(200).json({ error: "null", status: true });
   });
 };
 

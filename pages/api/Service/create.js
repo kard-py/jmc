@@ -27,9 +27,9 @@ export default async function Create(req, res) {
 
     const response = await db.collection("services").insertOne(data.payload);
 
-    res.status(200).json(response);
+    return res.status(200).json(response);
   } else {
     const error = result.error;
-    res.status(405).json({ error: { error } });
+    return res.status(405).json({ error: { error } });
   }
 }

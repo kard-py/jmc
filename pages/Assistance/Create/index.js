@@ -29,7 +29,7 @@ export const getServerSideProps = async (ctx) => {
         `http://${ctx.req.headers.host}/api/data/clientes`
       );
       const servicos = await axios.post(
-        `http://${ctx.req.headers.host}/api/data/servicos`
+        `http://${ctx.req.headers.host}/api/assistencia`
       );
 
       const id = response.data.length + 1;
@@ -55,7 +55,7 @@ export const getServerSideProps = async (ctx) => {
 export default function Create({ idReq, clientes, servicos }) {
   const { register, handleSubmit } = useForm();
 
-  const [assistance, setAssistance] = useState([]);
+  const [assistance, setAssistance] = useState(servicos);
   const [id, setId] = useState(idReq);
   const [data, setData] = useState("");
   const [empresa, setEmpresa] = useState("");
@@ -63,7 +63,6 @@ export default function Create({ idReq, clientes, servicos }) {
     cliente: {},
     index: "",
   });
-  const [projeto, setProjeto] = useState("");
   const [obs, setObs] = useState("");
   const [services, setServices] = useState([
     {
@@ -84,15 +83,6 @@ export default function Create({ idReq, clientes, servicos }) {
   useEffect(() => {
     reloadToken(sToken);
     const SECRET_KEY = process.env.SECRET_KEY;
-  }, []);
-
-  useEffect(() => {
-    const assis = servicos.filter((serv) => {
-      if (serv.Categoria === "ASSISTÊNCIA TÉCNICA") {
-        return serv;
-      }
-    });
-    setAssistance(assis);
   }, []);
 
   const handleChangeService = (e, index) => {
@@ -189,7 +179,6 @@ export default function Create({ idReq, clientes, servicos }) {
       dataPrev: data,
       empresa: empresa,
       cliente: cliente,
-      projeto: projeto,
       observacao: obs,
       serviços: services,
     };
@@ -340,31 +329,7 @@ export default function Create({ idReq, clientes, servicos }) {
                   ))}
                 </select>
               </div>
-              {/* Projeto */}
-              <div className="flex flex-col w-60 px-3">
-                <span
-                  className={`text-lg ${
-                    projeto !== "" ? "text-green-500" : "text-neutral-500"
-                  }`}
-                >
-                  Projeto:
-                </span>
-                <select
-                  required={true}
-                  name="projeto"
-                  value={projeto}
-                  onChange={(e) => {
-                    setProjeto(e.currentTarget.value);
-                  }}
-                  id="projeto"
-                  className={`w-full h-8 rounded-md border-2 ${
-                    projeto !== "" ? "border-green-500" : "border-neutral-500"
-                  } focus:shadow-none focus:outline-none focus:border-blue-400`}
-                >
-                  <option></option>
-                  <option value="1">Vale do Rio Verde</option>
-                </select>
-              </div>
+
               {/* Observação */}
               <div className="flex basis-10/12 flex-col px-3">
                 <span
