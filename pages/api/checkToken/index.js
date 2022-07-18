@@ -21,7 +21,6 @@ const CheckToken = (req, res) => {
   } else {
     res.status(200).json({ error: "Token Invalido", status: false });
   }
-  res.status(200).json({ error: "null", status: true });
 };
 
 export default CheckToken;
