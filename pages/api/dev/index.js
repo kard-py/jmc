@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import connect from "../../../services/mongodb";
 
-export default async (req, res) => {
+const Login = async (req, res) => {
   const data = {
     username: req.body.username,
     password: req.body.password,
@@ -32,3 +32,5 @@ export default async (req, res) => {
 
   res.end();
 };
+
+export default Login;

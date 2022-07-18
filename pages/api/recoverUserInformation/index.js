@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export default (req, res) => {
+const RecoverUserInformation = (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "method not allowed" });
   }
@@ -34,3 +34,5 @@ export default (req, res) => {
     res.status(200).json({ error: result.error, token_jwt: "NOT_AUTH" });
   }
 };
+
+export default RecoverUserInformation;

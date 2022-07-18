@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export default (req, res) => {
+const CheckToken = (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "method not allowed" });
   }
@@ -23,3 +23,5 @@ export default (req, res) => {
   }
   res.status(200).json({ error: "null", status: true });
 };
+
+export default CheckToken;

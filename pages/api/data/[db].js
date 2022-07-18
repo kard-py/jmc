@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import connect from "../../../services/mongodb";
 
-export default async (req, res) => {
+const Data = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "method not allowed" });
   }
@@ -31,3 +31,4 @@ export default async (req, res) => {
     .status(401)
     .json({ error: "LOGIN NÃO AUTORIZADO", token_jwt: "NOT_AUTH" });
 };
+export default Data;
