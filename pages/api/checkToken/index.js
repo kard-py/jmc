@@ -5,22 +5,12 @@ const CheckToken = (req, res) => {
     res.status(405).json({ error: "method not allowed" });
   }
 
-  const result = jwt.verify(
-    req.body.token_jwt,
-    process.env.SECRET_KEY,
-    (err, decode) => {
-      if (err) {
-        return { isValid: false, payload: null, error: err };
-      }
-      return { isValid: true, payload: decode };
+  jwt.verify(req.body.token_jwt, process.env.SECRET_KEY, (err, decode) => {
+    if (err) {
+      res.status(200).json({ error: "Token Invalido", status: false });
     }
-  );
-
-  if (result.isValid === true) {
     res.status(200).json({ error: "null", status: true });
-  } else {
-    res.status(200).json({ error: "Token Invalido", status: false });
-  }
+  });
 };
 
 export default CheckToken;
