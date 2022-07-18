@@ -27,9 +27,12 @@ export default async (req, res) => {
         }),
         userData: users[i].data,
       });
+      res.end();
     }
   }
   res
     .status(401)
     .json({ error: "LOGIN NÃO AUTORIZADO", token_jwt: "NOT_AUTH" });
+
+  res.end();
 };
