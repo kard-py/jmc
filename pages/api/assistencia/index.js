@@ -7,10 +7,7 @@ const Data = async (req, res) => {
 
   const { db } = await connect();
 
-  let servicos = await db
-    .collection("servicos")
-    .find({ Categoria: "ASSISTÊNCIA TÉCNICA" })
-    .toArray();
+  let servicos = await db.collection("servicos").find().toArray();
   return res.status(200).json(servicos);
 
   //   res

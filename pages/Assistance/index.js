@@ -59,7 +59,7 @@ const Assistance = () => {
         }
       >
         <Card
-          className={`flex-col text-center animate-[fade_1s]`}
+          className={`flex-col text-center cursor-pointer animate-[fade_1s]`}
           onClick={() => {
             router.push("/Assistance/Create");
           }}
@@ -68,7 +68,7 @@ const Assistance = () => {
           <p>Criar Requisição De Assitencia</p>
         </Card>
         <Card
-          className={`flex-col text-center animate-[fade_1s]`}
+          className={`flex-col text-center cursor-pointer animate-[fade_1s]`}
           onClick={() => {
             router.push("/Assistance/List");
           }}

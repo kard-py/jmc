@@ -1,14 +1,10 @@
 import { useForm } from "react-hook-form";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import logoImage from "../public/logo.png";
-import styles from "../styles/Login.module.css";
 import axios from "axios";
-
-import { useContext, useState } from "react";
-import { AuthContext } from "../contexts/AuthContext";
-import { parseCookies } from "nookies";
+import { useRouter } from "next/router";
 
 export const getServerSideProps = async (ctx) => {
   const { "JMC.Auth.token": token } = ctx.req.cookies;
@@ -42,18 +38,22 @@ export const getServerSideProps = async (ctx) => {
 
 export default function Login() {
   const { register, handleSubmit } = useForm();
-  const { err, setErr } = useState("");
-  const { signIn } = useContext(AuthContext);
-  const handleLogin = async (data) => {
-    const response = await axios
-      .post("/api/login", data)
-      .then((res) => {
-        signIn(res.data);
-      })
-      .catch((err) => {
-        alert(err.response.data.error);
-      });
-  };
+  const router = useRouter();
+  async function handleLogin(data) {
+    const user = await axios.post(`/api/userCheck/${data.username}`);
+
+    if (user.data.error === "null") {
+      const res = await axios.post("/api/register", data);
+      if (res.status === 200) {
+        router.push("/");
+      } else {
+        router.reload();
+      }
+    } else {
+      alert(user.data.error);
+      router.push("/");
+    }
+  }
 
   return (
     <div className={`flex w-full h-full flex-row`}>
@@ -82,7 +82,9 @@ export default function Login() {
         <div
           className={`flex flex-col bg-loginCard w-96 h-fit p-5 items-center justify-center border-4 border-jmc-blue shadow-2xl rounded-2xl min-h-[20rem]`}
         >
-          <h1 className={`text-white text-2xl m-2`}>Faça Login Para Acessar</h1>
+          <h1 className={`text-white text-2xl m-2`}>
+            Faça Registro Para Acessar
+          </h1>
 
           <form
             className={`flex flex-1 w-full flex-col items-center justify-center`}
@@ -91,8 +93,8 @@ export default function Login() {
             <div className={`flex flex-col w-4/5`}>
               <label className={`text-login text-2xl mb-1`}>Usuario: </label>
               <input
-                {...register("username")}
                 className={`h-11 rounded-xl pl-2 bg-info outline-none border-jmc-blue border-2 mb-5 text-white hover:opacity-75`}
+                {...register("username")}
                 name="username"
                 type="text"
                 placeholder="Digite O Seu Usuario"
@@ -102,36 +104,57 @@ export default function Login() {
             </div>
 
             <div className={`flex flex-col w-4/5`}>
+              <label className={`text-login text-2xl mb-1`}>Nome Real: </label>
+              <input
+                className={`h-11 rounded-xl pl-2 bg-info outline-none border-jmc-blue border-2 mb-5 text-white hover:opacity-75`}
+                {...register("name")}
+                name="name"
+                type="text"
+                placeholder="Digite Seu Nome"
+                required
+                tabIndex={2}
+              />
+            </div>
+            <div className={`flex flex-col w-4/5`}>
+              <label className={`text-login text-2xl mb-1`}>Email: </label>
+              <input
+                className={`h-11 rounded-xl pl-2 bg-info outline-none border-jmc-blue border-2 mb-5 text-white hover:opacity-75`}
+                {...register("email")}
+                name="email"
+                type="text"
+                placeholder="Digite Seu email"
+                required
+                tabIndex={3}
+              />
+            </div>
+
+            <div className={`flex flex-col w-4/5`}>
               <label className={`text-login text-2xl mb-1`}>Senha: </label>
               <input
-                {...register("password")}
                 className={`h-11 rounded-xl pl-2 bg-info outline-none border-jmc-blue border-2 mb-5 text-white hover:opacity-75`}
+                {...register("password")}
                 name="password"
                 type="password"
                 placeholder="Digite A Sua Senha"
                 required
-                tabIndex={2}
+                tabIndex={4}
               />
             </div>
 
             <button
               type="submit"
               className={`h-11 w-9/12 rounded-full pl-2 bg-info outline-none border-jmc-blue border-2 mb-5 text-white hover:opacity-75`}
-              // onClick={() => {}}
               tabIndex={3}
             >
               Login
             </button>
 
             <p className="text-white">
-              Não tem uma conta?{" "}
+              Já tem uma conta?{" "}
               <strong>
-                <Link href={"/register"}>Registre-se Aqui</Link>
+                <Link href={"/"}>Faça Login Aqui</Link>
               </strong>
             </p>
-            {err !== undefined && (
-              <span className="text-red-500"> Erro no Login: {err}</span>
-            )}
           </form>
         </div>
       </div>

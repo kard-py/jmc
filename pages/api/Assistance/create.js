@@ -20,7 +20,8 @@ export default async function Create(req, res) {
   if (result.isValid) {
     const data = req.body;
     delete data.token_jwt;
-    data.payload["_id"] = data.payload.id;
+    let id = data.payload.id;
+    data.payload["_id"] = id.toString();
 
     const { db } = await connect();
 

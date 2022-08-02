@@ -114,7 +114,7 @@ const Home = () => {
         {/* dashBoard */}
         <div className="flex flex-wrap flex-row justify-center items-center h-fit w-8/12">
           <div className="flex flex-col xl:flex-row h-fit items-center justify-center w-full">
-            <div className="flex flex-row xl:flex-col">
+            <div className="flex flex-row xl:flex-col flex-wrap items-center justify-center">
               <div className="bg-white shadow-2xl rounded-xl p-5 m-3 w-96 h-80">
                 <div className="flex flex-1 flex-col items-center justify-center h-full">
                   <div className="flex flex-col items-center">
@@ -138,7 +138,7 @@ const Home = () => {
             <div className="flex flex-col min-h-full w-fit justify-center flex-1">
               <div className="bg-white shadow-2xl rounded-xl p-5 m-3 h-fit">
                 <div className="flex flex-col">
-                  <div className="flex-1 flex items-center">
+                  <div className="flex-1 flex items-center w-96 xl:w-full">
                     <LineChart />
                     {/* Informações */}
                   </div>

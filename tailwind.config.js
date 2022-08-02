@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         "jmc-blue": "#009999",
         cinza: "#9a9a9a",
+        info: "#525252",
+        login: "#fafafa",
+        loginCard: "#4f4f4f",
       },
       spacing: {
         128: "32rem",
@@ -31,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

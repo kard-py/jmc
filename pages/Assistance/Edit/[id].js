@@ -60,10 +60,12 @@ export const getServerSideProps = async (ctx) => {
 
 const Create = ({ dataObj, clientes, servicos }) => {
   const { register, handleSubmit } = useForm();
-  const [assistance, setAssistance] = useState([]);
+  const [assistance, setAssistance] = useState(servicos);
   const [id, setId] = useState();
   const [data, setData] = useState("");
   const [empresa, setEmpresa] = useState("");
+  const [encaregado, setEncaregado] = useState("");
+  const [encaregadoCPF, setEncaregadoCPF] = useState("");
   const [cliente, setCliente] = useState({
     cliente: {},
     index: "",
@@ -101,15 +103,6 @@ const Create = ({ dataObj, clientes, servicos }) => {
     reloadToken(sToken);
   }, []);
 
-  useEffect(() => {
-    const assis = servicos.filter((serv) => {
-      if (serv.Categoria === "ASSISTÊNCIA TÉCNICA") {
-        return serv;
-      }
-    });
-    setAssistance(assis);
-  }, []);
-
   const handleChangeService = (e, index) => {
     e.preventDefault();
     services[index].service = e.currentTarget.value;
@@ -123,6 +116,8 @@ const Create = ({ dataObj, clientes, servicos }) => {
     services[index].desconto_Porcentagem = "";
     services[index].total = "";
     services[index].valor = "";
+    services[index].categoria =
+      assistance[parseInt(e.currentTarget.value)].Categoria;
     setServices([...services]);
   };
 
@@ -141,6 +136,7 @@ const Create = ({ dataObj, clientes, servicos }) => {
         descricao: "",
         valor: "",
         total: "",
+        categoria: "",
       },
     ]);
   };
@@ -206,6 +202,7 @@ const Create = ({ dataObj, clientes, servicos }) => {
       cliente: cliente,
       observacao: obs,
       serviços: services,
+      encaregado: { nome: encaregado, cpf: encaregadoCPF },
     };
 
     const response = await axios.post("/api/Assistance/edit", {
@@ -712,6 +709,57 @@ const Create = ({ dataObj, clientes, servicos }) => {
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <hr className="my-5 bg-zinc-500 w-full h-0.5" />
+
+            <div className="w-full flex flex-col items-center justify-center h-32">
+              <div className="flex flex-col w-1/2 px-3">
+                <span
+                  className={`text-lg ${
+                    encaregado !== "" ? "text-green-500" : "text-neutral-500"
+                  } w-full text-center`}
+                >
+                  Nome Do Encaregado:
+                </span>
+                <input
+                  required={true}
+                  name="encaregado"
+                  type="text"
+                  value={encaregado}
+                  onChange={(e) => {
+                    setEncaregado(e.currentTarget.value);
+                  }}
+                  className={`w-full border-2 p-2 rounded-md h-8 ${
+                    encaregado !== ""
+                      ? "border-green-500"
+                      : "border-neutral-500"
+                  } focus:shadow-none focus:outline-none focus:border-blue-400 `}
+                />
+              </div>
+              <div className="flex flex-col w-1/2 px-3">
+                <span
+                  className={`text-lg ${
+                    encaregadoCPF !== "" ? "text-green-500" : "text-neutral-500"
+                  } w-full text-center`}
+                >
+                  CPF Do Encaregado:
+                </span>
+                <input
+                  required={true}
+                  name="encaregadoCPF"
+                  type="text"
+                  value={encaregadoCPF}
+                  onChange={(e) => {
+                    setEncaregadoCPF(e.currentTarget.value);
+                  }}
+                  className={`w-full border-2 p-2 rounded-md h-8 ${
+                    encaregadoCPF !== ""
+                      ? "border-green-500"
+                      : "border-neutral-500"
+                  } focus:shadow-none focus:outline-none focus:border-blue-400 `}
+                />
               </div>
             </div>
 

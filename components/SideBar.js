@@ -81,17 +81,14 @@ const SideBar = ({ openedSideBar, setOpenedSidebar }) => {
               label="Ferramentas"
               icon={
                 <FaTools
-                  className={"fixed h-5 w-5 mx-5"}
+                  className={"fixed h-5 w-5 mx-5 cursor-pointer"}
                   size={20}
                   color="white"
                 />
               }
               opened={ferramentas}
               onPress={() => setFerramentas(!ferramentas)}
-              items={[
-                { text: "Relatorio Assitencia", route: "/Assistance" },
-                { text: "Serviços", route: "/Services" },
-              ]}
+              items={[{ text: "Relatorio Assitencia", route: "/Assistance" }]}
               router={router}
             />
           </>

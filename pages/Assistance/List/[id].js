@@ -8,8 +8,9 @@ import axios from "axios";
 
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfvsf from "pdfmake/build/vfs_fonts";
+import jsPDF from "jspdf";
+
+import { logo } from "../../../services/image";
 
 export const getServerSideProps = async (ctx) => {
   const { "JMC.Auth.token": token } = ctx.req.cookies;
@@ -56,8 +57,23 @@ export const getServerSideProps = async (ctx) => {
 const List = ({ id, data }) => {
   const router = useRouter();
   const [formatData, setFormatData] = useState(null);
-
   const { reloadToken, sToken } = useContext(AuthContext);
+  const categorias = [
+    "ASSISTÊNCIA TÉCNICA",
+    "PAINÉIS ELÉTRICOS",
+    "INSTALAÇÕES DE BAIXA TENSÃO",
+    "PROJETOS ELÉTRICOS",
+    "AUTOMAÇÃO",
+    "CONSULTORIA NA FATURA DE ENERGIA",
+    "DESCONTO",
+    "INSTALAÇÕES DE MÉDIA TENSÃO",
+    "ESTUDO DE PROTEÇÃO",
+    "SERVIÇOS DE ENGENHARIA",
+    "CONSULTORIA",
+    "OBRA",
+    "PARAMETRIZAÇÃO DE RELE",
+    "REVISÃO DE PAINÉIS ELÉTRICOS",
+  ];
 
   useEffect(() => {
     reloadToken(sToken);
@@ -65,92 +81,268 @@ const List = ({ id, data }) => {
     setFormatData(`${a[2]}/${a[1]}/${a[0]}`);
   }, []);
 
-  function genPDF(e) {
+  async function genPDF(e) {
     e.preventDefault();
-    pdfMake.vfs = pdfvsf.pdfMake.vfs;
 
-    let realDate = new Date();
-    let ano = realDate.getFullYear();
-    let mes = realDate.getMonth() + 1;
-    if (mes < 10) {
-      mes = `0${mes}`;
+    var addrs = data?.cliente.cliente["Endereço"].split(",");
+    var doc = new jsPDF("p", "px", "a4", false);
+    var width = doc.internal.pageSize.getWidth();
+    var height = doc.internal.pageSize.getHeight();
+
+    doc.setFontSize(20);
+
+    doc.addImage(logo, "PNG", 10, 5, 40, 25, "");
+
+    doc.text(
+      "JMC Automações",
+      doc.internal.pageSize.width / 2,
+      22,
+      null,
+      null,
+      "center"
+    );
+    // doc.line(10, 25, width - 10, 25);
+    doc.setFontSize(14);
+    doc.text("Informações do Cliente:", 20, 43);
+    doc.setFontSize(11);
+    doc.text(`• Nome: ${data?.cliente.cliente["Apelido"]}`, 25, 58);
+    doc.text(`• CPF/CNPJ: ${data?.cliente.cliente["CNPJ/CPF"]}`, 25, 73);
+    doc.text(`• Endereço: ${addrs[0]}`, 25, 88);
+    doc.text(`• Email: ${data?.cliente.cliente["Email"]}`, 25, 103);
+    doc.text(`• Telefone: ${data?.cliente.cliente["Telefone"]}`, 25, 118);
+    // doc.line(10, 120, width - 10, 120);
+
+    doc.setFontSize(14);
+    doc.text(
+      "Tipo de Serviço:",
+      doc.internal.pageSize.width / 2,
+      140,
+      null,
+      null,
+      "center"
+    );
+    doc.setFontSize(11);
+
+    for (let i = 0; i < categorias.length; i++) {
+      const cat = categorias[i];
+
+      if (cat === data["serviços"][0].categoria) {
+        console.log(cat);
+        if (cat === categorias[0]) {
+          const option =
+            "[X] - Assistência Técnica            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
+
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[1]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [X] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[2]) {
+          const option =
+            "[  ] - Alta Tensão            [X] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[3]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [X] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[4]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [X] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[5]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[6]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[7]) {
+          const option =
+            "[  ] - Alta Tensão            [X] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[8]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[9]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [X] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[10]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[11]) {
+          const option =
+            "[  ] - Alta Tensão            [X] - Instalação            [  ] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        } else if (cat === categorias[12]) {
+          const option =
+            "[  ] - Alta Tensão            [X] - Instalação            [  ] - Painel            [  ] - Automação";
+          break;
+        } else if (cat === categorias[13]) {
+          const option =
+            "[  ] - Alta Tensão            [  ] - Instalação            [X] - Painel            [  ] - Automação";
+          doc.text(
+            option,
+            doc.internal.pageSize.width / 2,
+            155,
+            null,
+            null,
+            "center"
+          );
+
+          break;
+        }
+      }
     }
 
-    let dia = realDate.getDate();
+    doc.setFontSize(14);
+    doc.text("Observações:", 20, 170);
 
-    realDate = `${dia}/${mes}/${ano}`;
+    let obs = data.observacao;
+    doc.setFontSize(11);
+    doc.text(obs, 20, 180, { maxWidth: width - 25 });
 
-    let dataPrev = data.dataPrev.split("-");
+    doc.setFontSize(14);
+    doc.text("Serviços Realizados:", 20, 300);
 
-    dataPrev = `${dataPrev[2]}/${dataPrev[1]}/${dataPrev[0]}`;
-
-    const servs = data.serviços.map((serv, i) => {
-      return serv.name;
+    data["serviços"].map((ser, i) => {
+      let line = i * 10;
+      doc.setFontSize(11);
+      doc.text(`${i + 1} - ${ser.name}`, 25, 315 + line);
     });
 
-    const header = [];
-    // margin: [left, top, right, bottom]
-    const body = [
-      {
-        text: "Relatorio de Assistencia Tecnica",
-        fontSize: 24,
-        alignment: "center",
-      },
-      {
-        text: "Informações do Cliente:",
-        fontSize: 16,
-        alignment: "left",
-        margin: [0, 15, 0, 0],
-        bold: true,
-      },
+    let end_list = data["serviços"].length * 10;
+    end_list = end_list + 315;
+    end_list = end_list + 100;
 
-      {
-        table: {
-          widths: ["*"],
-          body: [
-            [`Cliente: ${data.cliente.cliente.Apelido}`],
-            [`CNPJ/CPF: ${data.cliente.cliente["CNPJ/CPF"]}`],
-            [`Endereço: ${data.cliente.cliente.Endereço}`],
-            [`Realizado Em: ${dataPrev}`],
-          ],
-        },
-      },
+    if (end_list < height - 70) {
+      end_list = height - 70;
+    }
 
-      {
-        text: `Observações:`,
-        fontSize: 16,
-        margin: [0, 10, 0, 0],
-        bold: true,
-      },
-      {
-        table: {
-          widths: ["*"],
-          body: [[`${data.observacao}`]],
-        },
-      },
+    doc.setFontSize(14);
+    doc.text("Assinaturas:", 20, end_list);
 
-      {
-        text: `Serviços realizados:`,
-        margin: [0, 10, 0, 0],
-        fontSize: 16,
-      },
-      {
-        margin: [0, 5, 0, 0],
-        ul: servs,
-      },
-    ];
+    doc.setFontSize(11);
+    doc.text("Cargo: Encarregado", 20, end_list + 40);
 
-    const footer = [];
+    doc.line(20, end_list + 30, width - 20, end_list + 30);
 
-    const dd = {
-      pageSize: "A4",
-      pageMargins: [10, 10, 10, 10],
-      header: [header],
-      content: [body],
-      footer: [footer],
-    };
+    doc.text(`Nome: ${data?.encaregado.nome}`, 20, end_list + 25);
 
-    pdfMake.createPdf(dd).open();
+    doc.text(`CPF: ${data?.encaregado.cpf}`, 20, end_list + 15);
+
+    doc.output("dataurlnewwindow");
   }
 
   async function handleDelete(e) {
@@ -196,8 +388,11 @@ const List = ({ id, data }) => {
         </Card>
 
         <Card className="flex-col w-11/12 h-fit hidden lg:flex">
-          <div className="w-full mb-5 h-fit flex flex-row flex-wrap content-['']">
-            <div className="flex flex-col flex-1 pl-2 h-fit min-h-[320px] border border-gray-300 m-1 content-['']">
+          <div className="w-full mb-5 h-fit flex xl:flex-row flex-col flex-wrap content-['']">
+            <div
+              id="cliente"
+              className="flex flex-col flex-1 pl-2 min-h-[320px] h-fit border border-gray-300 m-1 content-['']"
+            >
               <h1 className="text-2xl m-5">Informações do Cliente:</h1>
               {data?.cliente.cliente["Apelido"] !== "" && (
                 <>
@@ -207,7 +402,6 @@ const List = ({ id, data }) => {
                       {data?.cliente.cliente["Apelido"]}
                     </p>
                   </div>
-                  <hr />
                 </>
               )}
               {data?.cliente.cliente["CNPJ/CPF"] !== "" && (
@@ -220,7 +414,6 @@ const List = ({ id, data }) => {
                       {data?.cliente.cliente["CNPJ/CPF"]}
                     </p>
                   </div>
-                  <hr />
                 </>
               )}
               {data?.cliente.cliente["Endereço"] !== "" && (
@@ -233,7 +426,6 @@ const List = ({ id, data }) => {
                       {data?.cliente.cliente["Endereço"]}
                     </p>
                   </div>
-                  <hr />
                 </>
               )}
               {data?.cliente.cliente["Email"] !== "" && (
@@ -242,7 +434,6 @@ const List = ({ id, data }) => {
                     <h2 className="text-mg text-jmc-blue font-bold">Email:</h2>
                     <p className="text-sm">{data?.cliente.cliente["Email"]}</p>
                   </div>
-                  <hr />
                 </>
               )}
               {data?.cliente.cliente["Telefone"] !== "" && (
@@ -261,18 +452,37 @@ const List = ({ id, data }) => {
 
             <div className="flex flex-col flex-[2] min-h-[320px] pl-2 h-fit border border-gray-300 m-1 content-['']">
               <h1 className="text-2xl m-5">Informações da Assistencia:</h1>
-              <div>
-                <span className="text-lg text-jmc-blue font-bold">
-                  Requisção numero:
-                </span>
-                <p>{id}</p>
-              </div>
+              <div className="flex flex-row">
+                <div className="flex-col flex flex-1">
+                  <div>
+                    <span className="text-lg text-jmc-blue font-bold">
+                      Requisção numero:
+                    </span>
+                    <p>{id}</p>
+                  </div>
 
-              <div>
-                <span className="text-lg text-jmc-blue font-bold">
-                  Previsão De Conclusão:
-                </span>
-                <p>{formatData}</p>
+                  <div>
+                    <span className="text-lg text-jmc-blue font-bold">
+                      Previsão De Conclusão:
+                    </span>
+                    <p>{formatData}</p>
+                  </div>
+                </div>
+                <div className="flex-col flex flex-1">
+                  <div>
+                    <span className="text-lg text-jmc-blue font-bold">
+                      Nome Do Encaregado:
+                    </span>
+                    <p>{data?.encaregado.nome}</p>
+                  </div>
+
+                  <div>
+                    <span className="text-lg text-jmc-blue font-bold">
+                      CPF:
+                    </span>
+                    <p>{data?.encaregado.cpf}</p>
+                  </div>
+                </div>
               </div>
 
               <div className="w-full flex flex-col items-center">
@@ -281,7 +491,7 @@ const List = ({ id, data }) => {
                 </span>
                 <textarea
                   className="w-full h-20 resize-none mr-1 mb-5 focus:outline-none"
-                  value={data?.observacao}
+                  value={data?.observacao.replace(",", ",\n")}
                   readOnly
                 />
               </div>
@@ -379,8 +589,8 @@ const List = ({ id, data }) => {
           </div>
         </Card>
 
-        <Card className="flex-col w-11/12 h-fit flex lg:hidden">
-          <div className="w-full mb-5 h-fit flex flex-row flex-wrap content-['']">
+        <Card id="content" className="flex-col w-11/12 h-fit flex lg:hidden">
+          <div className="w-full mb-5 h-fit flex flex-col flex-wrap content-['']">
             <div className="flex flex-col flex-1 pl-2 h-fit border border-gray-300 m-1 content-['']">
               <h1 className="text-2xl m-5">Informações do Cliente:</h1>
               {data?.cliente.cliente["Apelido"] !== "" && (
@@ -457,6 +667,18 @@ const List = ({ id, data }) => {
                   Previsão De Conclusão:
                 </span>
                 <p>{formatData}</p>
+              </div>
+
+              <div>
+                <span className="text-lg text-jmc-blue font-bold">
+                  Nome Do Encaregado:
+                </span>
+                <p>{data?.encaregado.nome}</p>
+              </div>
+
+              <div>
+                <span className="text-lg text-jmc-blue font-bold">CPF:</span>
+                <p>{data?.encaregado.cpf}</p>
               </div>
 
               <div className="w-full flex flex-col items-center">

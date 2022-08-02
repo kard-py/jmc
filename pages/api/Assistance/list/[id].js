@@ -23,7 +23,7 @@ export default async function Create(req, res) {
     const { db } = await connect();
 
     const item = {
-      _id: parseInt(req.query.id),
+      _id: req.query.id,
     };
 
     const response = await db.collection("assistances").findOne(item);

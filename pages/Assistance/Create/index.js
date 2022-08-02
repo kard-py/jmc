@@ -21,7 +21,7 @@ export const getServerSideProps = async (ctx) => {
     );
     if (result.data.error === "null" && result.data.status === true) {
       const response = await axios.post(
-        `http://${ctx.req.headers.host}/api/Service/list/`,
+        `http://${ctx.req.headers.host}/api/Assistance/list/`,
         { token_jwt: token }
       );
 
@@ -50,6 +50,14 @@ export const getServerSideProps = async (ctx) => {
       };
     }
   }
+
+  return {
+    redirect: {
+      destination: "/",
+      permanent: false,
+    },
+    props: {},
+  };
 };
 
 export default function Create({ idReq, clientes, servicos }) {
@@ -59,6 +67,8 @@ export default function Create({ idReq, clientes, servicos }) {
   const [id, setId] = useState(idReq);
   const [data, setData] = useState("");
   const [empresa, setEmpresa] = useState("");
+  const [encaregado, setEncaregado] = useState("");
+  const [encaregadoCPF, setEncaregadoCPF] = useState("");
   const [cliente, setCliente] = useState({
     cliente: {},
     index: "",
@@ -76,6 +86,7 @@ export default function Create({ idReq, clientes, servicos }) {
       descricao: "",
       total: "",
       valor: "",
+      categoria: "",
     },
   ]);
   const { reloadToken, sToken } = useContext(AuthContext);
@@ -98,6 +109,8 @@ export default function Create({ idReq, clientes, servicos }) {
     services[index].desconto_Porcentagem = "";
     services[index].total = "";
     services[index].valor = "";
+    services[index].categoria =
+      assistance[parseInt(e.currentTarget.value)].Categoria;
     setServices([...services]);
   };
 
@@ -116,6 +129,7 @@ export default function Create({ idReq, clientes, servicos }) {
         descricao: "",
         valor: "",
         total: "",
+        categoria: "",
       },
     ]);
   };
@@ -181,6 +195,7 @@ export default function Create({ idReq, clientes, servicos }) {
       cliente: cliente,
       observacao: obs,
       serviços: services,
+      encaregado: { nome: encaregado, cpf: encaregadoCPF },
     };
 
     const response = await axios.post("/api/Assistance/create", {
@@ -632,8 +647,8 @@ export default function Create({ idReq, clientes, servicos }) {
                                   Desconto em %
                                 </span>
                                 <input
-                                  name="preco"
-                                  type="descontoPorcentagem"
+                                  name="descontoPorcentagem"
+                                  type="number"
                                   onChange={(e) => {
                                     e.preventDefault();
                                     services[index].desconto_Porcentagem =
@@ -652,7 +667,7 @@ export default function Create({ idReq, clientes, servicos }) {
                             </div>
 
                             {/* Total */}
-                            <div className="flex flex-row flex-1 w-full flex-wrap items-center">
+                            <div className="flex flex-row flex-1 w-full mt-5 flex-wrap items-center">
                               <div className="flex flex-col w-fit px-3 m-5 justify-center">
                                 <span className="text-lg text-neutral-500">
                                   Total
@@ -687,6 +702,57 @@ export default function Create({ idReq, clientes, servicos }) {
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <hr className="my-5 bg-zinc-500 w-full h-0.5" />
+
+            <div className="w-full flex flex-col items-center justify-center h-32">
+              <div className="flex flex-col w-1/2 px-3">
+                <span
+                  className={`text-lg ${
+                    encaregado !== "" ? "text-green-500" : "text-neutral-500"
+                  } w-full text-center`}
+                >
+                  Nome Do Encaregado:
+                </span>
+                <input
+                  required={true}
+                  name="encaregado"
+                  type="text"
+                  value={encaregado}
+                  onChange={(e) => {
+                    setEncaregado(e.currentTarget.value);
+                  }}
+                  className={`w-full border-2 p-2 rounded-md h-8 ${
+                    encaregado !== ""
+                      ? "border-green-500"
+                      : "border-neutral-500"
+                  } focus:shadow-none focus:outline-none focus:border-blue-400 `}
+                />
+              </div>
+              <div className="flex flex-col w-1/2 px-3">
+                <span
+                  className={`text-lg ${
+                    encaregadoCPF !== "" ? "text-green-500" : "text-neutral-500"
+                  } w-full text-center`}
+                >
+                  CPF Do Encaregado:
+                </span>
+                <input
+                  required={true}
+                  name="encaregadoCPF"
+                  type="text"
+                  value={encaregadoCPF}
+                  onChange={(e) => {
+                    setEncaregadoCPF(e.currentTarget.value);
+                  }}
+                  className={`w-full border-2 p-2 rounded-md h-8 ${
+                    encaregadoCPF !== ""
+                      ? "border-green-500"
+                      : "border-neutral-500"
+                  } focus:shadow-none focus:outline-none focus:border-blue-400 `}
+                />
               </div>
             </div>
 
