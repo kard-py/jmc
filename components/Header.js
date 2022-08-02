@@ -43,11 +43,10 @@ export default function Header() {
           </span>
         </div>
       </div>
-
-      {router.pathname === "/Home" ? (
-        <></>
-      ) : (
-        <div className="fixed right-0 flex items-center">
+      <div className="fixed right-0 flex items-center">
+        {router.pathname === "/Home" ? (
+          <></>
+        ) : (
           <div className="relative">
             <img
               src={user?.avatar_url}
@@ -86,15 +85,14 @@ export default function Header() {
               </ul>
             </Card>
           </div>
+        )}
 
-          <div className="block w-20 mr-5 z-50">
-            <Link href={"https://jmcautomacaoindustrial.com.br/"}>
-              <Image src={logo} layout="responsive" />
-            </Link>
-          </div>
+        <div className="block w-20 mr-5 z-50">
+          <Link href={"https://jmcautomacaoindustrial.com.br/"}>
+            <Image src={logo} layout="responsive" />
+          </Link>
         </div>
-      )}
-
+      </div>
       <SideBar
         openedSideBar={openedSideBar}
         setOpenedSidebar={setOpenedSidebar}
