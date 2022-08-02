@@ -51,7 +51,7 @@ export default function Login() {
         signIn(res.data);
       })
       .catch((err) => {
-        alert(err.response.data.error);
+        alert("ERRO");
       });
   };
 
