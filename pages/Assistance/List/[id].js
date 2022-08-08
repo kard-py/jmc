@@ -127,7 +127,6 @@ const List = ({ id, data }) => {
       const cat = categorias[i];
 
       if (cat === data["serviços"][0].categoria) {
-        console.log(cat);
         if (cat === categorias[0]) {
           const option =
             "[X] - Assistência Técnica            [  ] - Instalação            [  ] - Painel            [  ] - Automação";
