@@ -6,7 +6,7 @@ const Data = async (req, res) => {
     return res.status(405).json({ error: "method not allowed" });
   }
   if (!req.body.token_jwt) {
-    res.status(500).json({ error: "Not Auth" });
+    res.status(403).json({ error: "Not Auth" });
   }
 
   const token = req.body.token_jwt;

@@ -24,14 +24,18 @@ export const getServerSideProps = async (ctx) => {
         `https://${ctx.req.headers.host}/api/Assistance/list/`,
         { token_jwt: token }
       );
+
       const clientes = await axios.post(
-        `https://${ctx.req.headers.host}/api/data/clientes`
-      );
-      const servicos = await axios.post(
-        `https://${ctx.req.headers.host}/api/assistencia`
+        `https://${ctx.req.headers.host}/api/data/clientes`,
+        { token_jwt: token }
       );
 
-      const id = response.data.length + 1;
+      const servicos = await axios.post(
+        `https://${ctx.req.headers.host}/api/assistencia`,
+        { token_jwt: token }
+      );
+
+      // const id = response.data.length + 1;
       return {
         props: {
           clientes: clientes.data,
