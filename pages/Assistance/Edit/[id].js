@@ -14,21 +14,21 @@ export const getServerSideProps = async (ctx) => {
 
   if (token && token !== "NOT_AUTH") {
     const result = await axios.post(
-      `http://${ctx.req.headers.host}/api/checkToken`,
+      `https://${ctx.req.headers.host}/api/checkToken`,
       {
         token_jwt: token,
       }
     );
     if (result.data.error === "null" && result.data.status === true) {
       const response = await axios.post(
-        `http://${ctx.req.headers.host}/api/Assistance/list/${ctx.query.id}`,
+        `https://${ctx.req.headers.host}/api/Assistance/list/${ctx.query.id}`,
         { token_jwt: token }
       );
       const clientes = await axios.post(
-        `http://${ctx.req.headers.host}/api/data/clientes`
+        `https://${ctx.req.headers.host}/api/data/clientes`
       );
       const servicos = await axios.post(
-        `http://${ctx.req.headers.host}/api/data/servicos`
+        `https://${ctx.req.headers.host}/api/data/servicos`
       );
 
       return {

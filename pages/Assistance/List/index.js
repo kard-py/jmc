@@ -12,14 +12,14 @@ export const getServerSideProps = async (ctx) => {
 
   if (token && token !== "NOT_AUTH") {
     const result = await axios.post(
-      `http://${ctx.req.headers.host}/api/checkToken`,
+      `https://${ctx.req.headers.host}/api/checkToken`,
       {
         token_jwt: token,
       }
     );
     if (result.data.error === "null" && result.data.status === true) {
       const response = await axios.post(
-        `http://${ctx.req.headers.host}/api/Assistance/list/`,
+        `https://${ctx.req.headers.host}/api/Assistance/list/`,
         { token_jwt: token }
       );
       const data = response.data;

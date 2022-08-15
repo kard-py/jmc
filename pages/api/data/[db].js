@@ -19,7 +19,6 @@ const Data = async (req, res) => {
 
   if (result.isValid) {
     const { db } = await connect();
-
     if (req.query.db === "clientes") {
       let clientes = await db.collection("clientes").find().toArray();
       return res.status(200).json(clientes);

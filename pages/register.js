@@ -11,7 +11,7 @@ export const getServerSideProps = async (ctx) => {
 
   if (token && token !== "NOT_AUTH") {
     const result = await axios.post(
-      `http://${ctx.req.headers.host}/api/checkToken`,
+      `https://${ctx.req.headers.host}/api/checkToken`,
       {
         token_jwt: token,
       }
