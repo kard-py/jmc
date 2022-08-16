@@ -35,7 +35,7 @@ export const getServerSideProps = async (ctx) => {
         { token_jwt: token }
       );
 
-      // const id = response.data.length + 1;
+      const id = response.data.length + 1;
       return {
         props: {
           clientes: clientes.data,
