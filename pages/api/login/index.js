@@ -26,7 +26,7 @@ const Login = async (req, res) => {
   }
 
   return res
-    .status(401)
+    .status(200)
     .json({ error: "Usuario ou senha Inesistente", token_jwt: "NOT_AUTH" });
 };
 export default Login;
