@@ -5,39 +5,6 @@ import { useRouter } from "next/router";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import axios from "axios";
-export const getServerSideProps = async (ctx) => {
-  const { "JMC.Auth.token": token } = ctx.req.cookies;
-
-  if (token && token !== "NOT_AUTH") {
-    const result = await axios.post(
-      `https://${ctx.req.headers.host}/api/checkToken`,
-      {
-        token_jwt: token,
-      }
-    );
-    if (result.data.error === "null" && result.data.status === true) {
-      return {
-        props: {},
-      };
-    } else if (result.data.error !== "null" && result.data.status === false) {
-      return {
-        redirect: {
-          destination: "/",
-          permanent: false,
-        },
-        props: {},
-      };
-    }
-  }
-
-  return {
-    redirect: {
-      destination: "/",
-      permanent: false,
-    },
-    props: {},
-  };
-};
 
 const Assistance = () => {
   const router = useRouter();
