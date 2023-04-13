@@ -7,47 +7,6 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Link from "next/link";
 import axios from "axios";
 
-export const getServerSideProps = async (ctx) => {
-  const { "JMC.Auth.token": token } = ctx.req.cookies;
-
-  if (token && token !== "NOT_AUTH") {
-    const result = await axios.post(
-      `https://${ctx.req.headers.host}/api/checkToken`,
-      {
-        token_jwt: token,
-      }
-    );
-    if (result.data.error === "null" && result.data.status === true) {
-      const response = await axios.post(
-        `https://${ctx.req.headers.host}/api/Assistance/list/`,
-        { token_jwt: token }
-      );
-      const data = response.data;
-      return {
-        props: {
-          data: data,
-        },
-      };
-    } else if (result.data.error !== "null" && result.data.status === false) {
-      return {
-        redirect: {
-          destination: "/",
-          permanent: false,
-        },
-        props: {},
-      };
-    }
-  }
-
-  return {
-    redirect: {
-      destination: "/",
-      permanent: false,
-    },
-    props: {},
-  };
-};
-
 const List = ({ data }) => {
   const router = useRouter();
 
