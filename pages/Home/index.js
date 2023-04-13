@@ -6,39 +6,6 @@ import { DoughnutChart } from "../../components/DoughnutChart";
 import { AuthContext } from "../../contexts/AuthContext";
 import axios from "axios";
 
-export const getServerSideProps = async (ctx) => {
-  const { "JMC.Auth.token": token } = ctx.req.cookies;
-
-  if (token && token !== "NOT_AUTH") {
-    const result = await axios.post(
-      `http://${ctx.req.headers.host}/api/checkToken`,
-      {
-        token_jwt: token,
-      }
-    );
-    if (result.data.error === "null" && result.data.status === true) {
-      return {
-        props: {},
-      };
-    } else if (result.data.error !== "null" && result.data.status === false) {
-      return {
-        redirect: {
-          destination: "/",
-          permanent: false,
-        },
-        props: {},
-      };
-    }
-  }
-
-  return {
-    redirect: {
-      destination: "/",
-      permanent: false,
-    },
-    props: {},
-  };
-};
 
 const Home = () => {
   const [data, setData] = useState({
